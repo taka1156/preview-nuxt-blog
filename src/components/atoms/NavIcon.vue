@@ -23,6 +23,8 @@
   height: 50px;
   width: 50px;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 
 span {
@@ -30,8 +32,9 @@ span {
   height: 2px;
   width: 70%;
   margin: auto;
+  padding: 0;
   position: absolute;
-  top: calc((100% - 4px) / 2);
+  top: calc((100% - 2px) / 2);
   left: 0;
   right: 0;
   background-color: #fff;

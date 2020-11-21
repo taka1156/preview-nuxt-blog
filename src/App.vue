@@ -1,6 +1,6 @@
 <template>
   <div class="App">
-    <blog-navigation :logo-text="logoText" :routes="routes" />
+    <blog-navigation :logo-text="logoText" />
     <div class="container">
       <router-view />
     </div>

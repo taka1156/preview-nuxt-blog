@@ -3,8 +3,11 @@
     <div class="nav-bar">
       <div class="nav-bar__box">
         <nav-logo>{{ logoText }}</nav-logo>
-        <div @click="$emit('change-state')">
+        <div class="nav-bar__icon-box" @click="$emit('change-state')">
           <nav-icon :is-open="isOpen" />
+          <p class="nav-bar__text">
+            {{ isOpen === true ? 'CLOSE' : 'NAVI' }}
+          </p>
         </div>
       </div>
     </div>
@@ -53,5 +56,17 @@ export default {
   height: 90%;
   width: 100%;
   margin: 0.5em auto;
+}
+
+.nav-bar__icon-box {
+  margin-top: -5px;
+  padding: 0;
+}
+
+.nav-bar__text {
+  margin-top: -10px;
+  padding: 0;
+  color: white;
+  font-size: 10px;
 }
 </style>

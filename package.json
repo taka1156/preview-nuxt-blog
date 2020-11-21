@@ -15,7 +15,8 @@
     "marked": "^1.2.2",
     "normalize.css": "^8.0.1",
     "vue": "^2.6.11",
-    "vue-router": "^3.4.8"
+    "vue-router": "^3.4.8",
+    "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
