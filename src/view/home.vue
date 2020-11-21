@@ -1,17 +1,11 @@
 <template>
   <div class="hello">
     <h1>Don't enter</h1>
-    <p>
-      このページは
-      <a href="https://blog.taka1156.site/" rel="noopener">Taka'sTechBlog</a>
-      のプレビューサイトです。
-      <a href="https://blog.taka1156.site/" rel="noopener"><img :src="require('@/assets/blog-logo.png')" /></a>
-    </p>
     <div class="box">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="90"
-        height="90"
+        width="100"
+        height="100"
         fill="#28a745"
         viewBox="0 0 48 48"
       >
@@ -20,6 +14,16 @@
         />
       </svg>
     </div>
+    <p>
+      このページは
+      <a href="https://blog.taka1156.site/" rel="noopener">
+      Taka'sTechBlog
+      </a><br />
+      のプレビューサイトです。
+    </p>
+    <a href="https://blog.taka1156.site/" rel="noopener"
+      ><img :src="require('@/assets/blog-logo.png')"
+    /></a>
   </div>
 </template>
 

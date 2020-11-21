@@ -7,11 +7,6 @@ export default new Router({
     routes: [
       {
         path: '*',
-        name: 'NotFound',
-        component: () => import('@/view/NotFound')
-      },
-      {
-        path: '/',
         name: 'home',
         component: () => import('@/view/home.vue')
       },
