@@ -2,13 +2,11 @@
   <div>
     <div class="article-tag">
       タグ:&nbsp;
-      <article-badge
-        v-for="(tag, index) in tags"
-        :key="index"
-        :badge-type="'tag'"
-        :badge="tag"
-        class="article-badge__outline"
-      />
+      <div v-for="(tag, index) in tags" :key="`tag_${index}`">
+        <div @click="tagJump(tag)">
+          <article-badge :badge="tag" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -22,6 +20,9 @@ export default {
     'article-badge': ArticleBadge
   },
   props: {
+    /**
+     * タグ情報(複数属することができる)
+     */
     tags: {
       type: Array,
       default: () => [],
@@ -32,16 +33,16 @@ export default {
 </script>
 
 <style scoped>
+::v-deep .article-badge--extend {
+  width: 100px;
+  margin: 2px;
+  color: rgb(40, 167, 69);
+  border: 1px solid rgb(40, 167, 69);
+}
+
 .article-tag {
   display: flex;
   flex-wrap: wrap;
   margin: 10px;
-}
-
-.article-badge__outline {
-  width: 100px;
-  margin: 2px;
-  border: 1px solid rgba(40, 167, 69, 0.9);
-  color: rgba(40, 167, 69, 0.9);
 }
 </style>

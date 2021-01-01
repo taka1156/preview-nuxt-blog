@@ -1,13 +1,16 @@
 <template>
   <div>
-    <div class="index-list" v-show="isOpen">
+    <div v-show="isOpen" class="index-list">
       <div class="index-list__box">
-        <strong>Index</strong>
+        <h3 class="index-list__title">Index</h3>
         <ul>
-          <li v-for="(t, index) in toc" :key="`index_${index}`">
-            <div class="index-list__item-box" @click="changeState">
-              <index-list-item :t="t" />
-            </div>
+          <li
+            v-for="(t, index) in toc"
+            :key="`index_${index}`"
+            class="index-list__item-box"
+            @click="changeState"
+          >
+            <index-list-item :t="t" />
           </li>
         </ul>
       </div>
@@ -24,11 +27,17 @@ export default {
     'index-list-item': IndexListItem
   },
   props: {
+    /**
+     * 目次の開閉状態
+     */
     isOpen: {
       type: Boolean,
       default: false,
       required: true
     },
+    /**
+     * 目次一覧
+     */
     toc: {
       type: Array,
       default: () => [],
@@ -44,37 +53,54 @@ export default {
 </script>
 
 <style scoped>
-/*  */
-ul {
+/* css reset */
+ul,
+li {
+  padding: 0;
+  margin: 0;
   list-style-type: none;
 }
 
-/* */
+/* css reset */
 
 .index-list {
   position: fixed;
-  bottom: 110px;
   right: 10px;
-  height: 250px;
-  width: 55%;
-  overflow-y: scroll;
+  bottom: 110px;
   z-index: 2;
+  width: 55%;
+  height: 250px;
+  overflow-y: scroll;
   background-color: white;
-  border: 3px solid rgba(40, 167, 69, 0.9);
+  border: 1px solid rgba(40, 167, 69, 0.9);
 }
 
 .index-list__box {
   margin: 0 auto;
 }
 
-.index-list__item-box {
-  margin: 10px;
+.index-list__title {
+  color: rgba(40, 167, 69, 0.9);
+  text-align: center;
 }
 
-li {
-  margin: 0;
-  padding: 0;
+.index-list__item-box {
+  margin: 10px;
   text-align: left;
+}
+
+.index-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.index-list::-webkit-scrollbar-track {
+  display: none;
+}
+
+.index-list::-webkit-scrollbar-thumb {
+  width: 100%;
+  background-color: gray;
+  border-radius: 5px;
 }
 
 @media (min-width: 790px) {

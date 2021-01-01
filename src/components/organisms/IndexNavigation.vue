@@ -10,7 +10,7 @@ import IndexNav from '../molecules/IndexNav';
 import IndexList from '../molecules/IndexList';
 
 export default {
-  name: 'IndexList',
+  name: 'IndexNavigation',
   components: {
     'index-nav': IndexNav,
     'index-list': IndexList

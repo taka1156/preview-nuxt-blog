@@ -1,15 +1,15 @@
 <template>
-  <div class="article-badge">
-    <base-text
-      class="base-text--badge"
-      :class="[badgeType === 'category' ? 'base-text--white' : 'base-text--green']"
-      >{{ badge.name }}
-    </base-text>
-    <base-img
-      class="base-img--sm"
-      :img-url="badge.img.url"
-      :img-alt="`${badge.name}の画像`"
-    />
+  <div>
+    <div class="article-badge article-badge--extend">
+      <base-text>
+        {{ badge.name }}
+      </base-text>
+      <base-img
+        :size="`sm`"
+        :img-url="badge.img.url"
+        :img-alt="`${badge.name}の画像`"
+      />
+    </div>
   </div>
 </template>
 
@@ -24,14 +24,12 @@ export default {
     'base-text': BaseText
   },
   props: {
-    badgeType: {
-      type: String,
-      default: '',
-      required: true
-    },
+    /**
+     * バッジの情報
+     * (id、バッジ名、画像URL)
+     */
     badge: {
       type: Object,
-      default: () => {},
       required: true
     }
   }
@@ -41,17 +39,22 @@ export default {
 <style scoped>
 /* css reset */
 p {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 /* css reset */
+
+::v-deep .base-text--extend {
+  font-size: 12px;
+  line-height: 30px;
+}
 
 .article-badge {
   display: flex;
   justify-content: center;
   padding: 2px;
-  border-radius: 20px;
   cursor: pointer;
+  border-radius: 20px;
 }
 </style>

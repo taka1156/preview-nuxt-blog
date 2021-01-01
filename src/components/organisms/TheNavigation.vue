@@ -10,7 +10,7 @@
 import NavBar from '../molecules/NavBar';
 
 export default {
-  name: 'BaseNav',
+  name: 'TheNavigation',
   components: {
     'nav-bar': NavBar,
   },

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <a class="index-list-item" :href="`#${t.anchor}`" v-scroll-to="`#${t.anchor}`">
-      {{t.index}}. {{ t.escapedText }}
+    <a v-scroll-to="`#${t.anchor}`" class="index-list-item" :href="`#${t.anchor}`">
+      {{ t.index }}.{{ t.escapedText }}
     </a>
   </div>
 </template>
@@ -21,8 +21,8 @@ export default {
 
 <style scoped>
 .index-list-item {
-  color: rgba(40, 167, 69, 0.9);
-  font-size: 13px;
+  font-size: 15px;
+  color: rgb(40, 167, 69);
 }
 
 @media (min-width: 790px) {

@@ -1,29 +1,91 @@
 <template>
   <div class="App">
-    <blog-navigation :logo-text="logoText" />
+    <header>
+      <the-navigation :logo-text="logoText" />
+    </header>
     <div class="container">
-      <router-view />
+      <main>
+        <transition name="slide-in-up" mode="out-in">
+          <router-view />
+        </transition>
+      </main>
+      <footer>
+        <the-copyright />
+      </footer>
     </div>
   </div>
 </template>
 
 <script>
-  import BlogNavigation from '@/components/organisms/BlogNavigation';
+import TheNavigation from '@/components/organisms/TheNavigation';
+import TheCopyright from '@/components/organisms/TheCopyright';
 
-  export default {
-    components: {
-      'blog-navigation': BlogNavigation,
-    },
-    data() {
-      return {
-        logoText: "Taka'sTechBlog",
-      };
-    },
-  };
+export default {
+  components: {
+    'the-navigation': TheNavigation,
+    'the-copyright': TheCopyright
+  },
+  data() {
+    return {
+      logoText: "Taka'sTechBlog"
+    };
+  }
+};
 </script>
 
 <style scoped>
-  .App {
-    text-align: center;
+/* css reset */
+header,
+footer {
+  padding: 0;
+  margin: 0;
+}
+/* css reset */
+
+.App {
+  text-align: center;
+}
+
+.container {
+  margin: 70px auto 0;
+}
+
+main {
+  min-height: 90vh;
+  padding: 0;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    width: 80vw;
   }
+}
+
+.slide-in-up-enter {
+  opacity: 0;
+  transform: translate(0, 100px);
+}
+
+.slide-in-up-enter-to {
+  opacity: 1;
+}
+
+.slide-in-up-enter-active {
+  transition: all 1s 0s ease;
+}
+
+.slide-in-up-leave {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.slide-in-up-leave-to {
+  opacity: 0;
+  transform: translate(0, -100px);
+}
+
+.slide-in-up-leave-active {
+  transition: all 0.2s 0s ease;
+}
 </style>

@@ -1,22 +1,25 @@
 <template>
   <div>
     <div class="index-nav" @click="changeState">
-      <nav-icon :is-open="isOpen" />
-      <p class="index-nav__text">
-        {{ isOpen === true ? 'CLOSE' : 'INDEX' }}
-      </p>
+      <base-nav-icon :is-open="isOpen">
+        {{ isOpen ? 'CLOSE' : 'INDEX' }}
+      </base-nav-icon>
     </div>
   </div>
 </template>
 
 <script>
-import NavIcon from '../atoms/NavIcon';
+import BaseNavIcon from '../atoms/BaseNavIcon';
+
 export default {
   name: 'IndexNav',
   components: {
-    'nav-icon': NavIcon
+    'base-nav-icon': BaseNavIcon
   },
   props: {
+    /**
+     * 目次の開閉状態
+     */
     isOpen: {
       type: Boolean,
       default: false,
@@ -34,18 +37,11 @@ export default {
 <style scoped>
 .index-nav {
   position: fixed;
-  bottom: 50px;
   right: 10px;
-  height: 55px;
-  width: 50px;
-  background-color: rgba(40, 167, 69, 0.9);
+  bottom: 50px;
   z-index: 2;
-}
-
-.index-nav__text {
-  margin-top: -10px;
-  padding: 0;
-  color: white;
-  font-size: 10px
+  width: 50px;
+  height: 55px;
+  background-color: rgba(40, 167, 69, 0.9);
 }
 </style>

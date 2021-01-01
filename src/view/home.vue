@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div>
     <h1>Don't enter</h1>
     <div class="box">
       <svg
@@ -17,26 +17,25 @@
     <p>
       このページは
       <a href="https://blog.taka1156.site/" rel="noopener">
-      Taka'sTechBlog
+        Taka'sTechBlog
       </a><br />
       のプレビューサイトです。
     </p>
-    <a href="https://blog.taka1156.site/" rel="noopener"
-      ><img :src="require('@/assets/blog-logo.png')"
-    /></a>
+    <a href="https://blog.taka1156.site/" rel="noopener">
+      <img :src="require('@/assets/blog-logo.png')"/>
+    </a>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'HelloWorld',
+    name: 'home',
     props: {
       msg: String,
     },
   };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   h1 {
     margin: 200px 0 0 0;

@@ -1,37 +1,25 @@
-<template functional>
-  <p class="base-text" :class="data.staticClass || ''">
-    <slot />
-  </p>
+<template>
+  <div>
+    <p class="base-text--extend">
+      <!-- @slot テキスト -->
+      <slot />
+    </p>
+  </div>
 </template>
+
+<script>
+export default {
+  name: 'BaseText'
+};
+</script>
 
 <style scoped>
 /* css reset */
 p {
-  margin: 0;
+  display: block;
   padding: 0;
+  margin: 0;
 }
 
 /* css reset */
-
-.base-text {
-  display: block;
-}
-
-.base-text--white {
-  color: white;
-}
-
-.base-text--green {
-  color: rgba(40, 167, 69, 0.9);
-}
-
-.base-text--badge {
-  font-size: 12px;
-  line-height: 30px;
-}
-
-.base-text--pagenation {
-  padding: 10px;
-  font-size: 20px;
-}
 </style>
