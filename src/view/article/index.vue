@@ -1,5 +1,5 @@
 <template>
-  <div class="Article">
+  <div>
     <div v-if="status">
       <div class="article-content">
         <!--記事のheader-->

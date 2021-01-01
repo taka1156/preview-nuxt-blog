@@ -2,7 +2,7 @@
   <div>
     <div class="nav-bar">
       <div class="nav-bar__box">
-        <nav-logo>{{ logoText }}</nav-logo>
+        <base-logo>{{ logoText }}</base-logo>
         <div class="nav-bar__icon-box" @click="$emit('change-state')">
           <base-nav-icon :is-open="isOpen" />
           <p class="nav-bar__text">
@@ -16,13 +16,13 @@
 
 <script>
 import BaseNavIcon from '../atoms/BaseNavIcon';
-import NavLogo from '../atoms/NavLogo';
+import BaseLogo from '../atoms/BaseLogo';
 
 export default {
   name: 'NavBar',
   components: {
     'base-nav-icon': BaseNavIcon,
-    'nav-logo': NavLogo
+    'base-logo': BaseLogo
   },
   props: {
     logoText: {

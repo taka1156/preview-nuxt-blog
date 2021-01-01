@@ -51,7 +51,7 @@ footer {
 }
 
 main {
-  min-height: 90vh;
+  min-height: 65vh;
   padding: 0;
   margin: 0 auto;
 }
