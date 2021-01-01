@@ -21,9 +21,6 @@
       </a><br />
       のプレビューサイトです。
     </p>
-    <a href="https://blog.taka1156.site/" rel="noopener">
-      <img :src="require('@/assets/blog-logo.png')"/>
-    </a>
   </div>
 </template>
 
@@ -49,23 +46,5 @@
     margin: 50px auto;
     height: 90px;
     width: 90px;
-  }
-
-  img {
-    height: 50px;
-    width: 50px;
-    animation: 3s blog-logo infinite ease;
-    animation-delay: 0.2s;
-    z-index: 2;
-  }
-
-  @keyframes blog-logo {
-    from {
-      transform: rotate(-360deg);
-    }
-
-    to {
-      transform: rotate(360deg);
-    }
   }
 </style>
