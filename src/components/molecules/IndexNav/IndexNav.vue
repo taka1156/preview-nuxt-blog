@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import BaseNavIcon from '../atoms/BaseNavIcon';
+import BaseNavIcon from '../../atoms/BaseNavIcon/BaseNavIcon';
 
 export default {
   name: 'IndexNav',

@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import TheNavigation from '@/components/organisms/TheNavigation';
-import TheCopyright from '@/components/organisms/TheCopyright';
+import TheNavigation from '@/components/organisms/TheNavigation/TheNavigation';
+import TheCopyright from '@/components/organisms/TheCopyright/TheCopyright';
 
 export default {
   components: {

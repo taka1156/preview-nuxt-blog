@@ -5,7 +5,7 @@ import VueScrollTo from 'vue-scrollto';
 import 'normalize.css';
 import '@/assets/css/layout.css';
 Vue.use(VueScrollTo, {
-  offset: -70,
+  offset: -70
 });
 
 Vue.config.productionTip = false;

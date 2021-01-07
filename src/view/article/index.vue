@@ -28,8 +28,8 @@
 <style src="highlight.js/styles/github.css"></style>
 
 <script>
-import ArticleHeader from '@/components/organisms/ArticleHeader';
-import IndexNavigation from '@/components/organisms/IndexNavigation.vue';
+import ArticleHeader from '@/components/organisms/ArticleHeader/ArticleHeader';
+import IndexNavigation from '@/components/organisms/IndexNavigation/IndexNavigation';
 import 'github-markdown-css';
 import { marked, toc } from '@/plugins/marked/index.js';
 import axios from 'axios';
@@ -39,17 +39,6 @@ export default {
   components: {
     'article-header': ArticleHeader,
     'index-navigation': IndexNavigation
-  },
-  async created() {
-    // 記事取得
-    await this.getArticle();
-    this.status = !this.status;
-    // ogp
-    this.generateOgp();
-  },
-  async mounted() {
-    //scroll
-    this.scrollTo();
   },
   data() {
     return {
@@ -66,6 +55,17 @@ export default {
     toc() {
       return toc;
     }
+  },
+  async created() {
+    // 記事取得
+    await this.getArticle();
+    this.status = !this.status;
+    // ogp
+    this.generateOgp();
+  },
+  async mounted() {
+    //scroll
+    this.scrollTo();
   },
   methods: {
     async getArticle() {

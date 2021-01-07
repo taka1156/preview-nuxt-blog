@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import ArticleBadge from './ArticleBadge';
+import ArticleBadge from '../../molecules/ArticleBadge/ArticleBadge';
 
 export default {
   name: 'ArticleCategory',

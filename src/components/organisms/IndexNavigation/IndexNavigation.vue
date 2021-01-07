@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import IndexNav from '../molecules/IndexNav';
-import IndexList from '../molecules/IndexList';
+import IndexNav from '../../molecules/IndexNav/IndexNav';
+import IndexList from '../../molecules/IndexList/IndexList';
 
 export default {
   name: 'IndexNavigation',

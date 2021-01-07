@@ -3,7 +3,7 @@
     <div class="nav-bar">
       <div class="nav-bar__box">
         <base-logo>{{ logoText }}</base-logo>
-        <div class="nav-bar__icon-box" @click="$emit('change-state')">
+        <div class="nav-bar__icon-box">
           <base-nav-icon :is-open="isOpen" />
           <p class="nav-bar__text">
             {{ isOpen === true ? 'CLOSE' : 'NAVI' }}
@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import BaseNavIcon from '../atoms/BaseNavIcon';
-import BaseLogo from '../atoms/BaseLogo';
+import BaseNavIcon from '../../atoms/BaseNavIcon/BaseNavIcon';
+import BaseLogo from '../../atoms/BaseLogo/BaseLogo';
 
 export default {
   name: 'NavBar',

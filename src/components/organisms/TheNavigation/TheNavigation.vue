@@ -7,19 +7,19 @@
 </template>
 
 <script>
-import NavBar from '../molecules/NavBar';
+import NavBar from '../../molecules/NavBar/NavBar';
 
 export default {
   name: 'TheNavigation',
   components: {
-    'nav-bar': NavBar,
+    'nav-bar': NavBar
   },
   props: {
     logoText: {
       type: String,
       default: 'Please Setting Title',
       required: true
-    },
+    }
   },
   data() {
     return {

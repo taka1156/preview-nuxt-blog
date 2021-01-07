@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import IndexListItem from './IndexListItem';
+import IndexListItem from '../IndexListItem/IndexListItem';
 
 export default {
   name: 'IndexList',

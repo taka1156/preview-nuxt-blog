@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import ArticleCategory from '../molecules/ArticleCategory';
-import ArticleTag from '../molecules/ArticleTag';
-import ArticleDate from '../molecules/ArticleDate';
+import ArticleCategory from '../ArticleCategory/ArticleCategory';
+import ArticleTag from '../ArticleTag/ArticleTag';
+import ArticleDate from '../../molecules/ArticleDate/ArticleDate';
 
 export default {
   name: 'ArticleHeader',
