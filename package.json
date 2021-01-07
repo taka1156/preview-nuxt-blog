@@ -8,24 +8,24 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "axios": "^0.21.0",
-    "core-js": "^3.6.5",
-    "github-markdown-css": "^4.0.0",
-    "highlight.js": "^10.3.2",
-    "marked": "^1.2.2",
-    "normalize.css": "^8.0.1",
-    "vue": "^2.6.11",
-    "vue-router": "^3.4.8",
-    "vue-scrollto": "^2.20.0"
+    "axios": "0.21.0",
+    "core-js": "3.6.5",
+    "github-markdown-css": "4.0.0",
+    "highlight.js": "10.3.2",
+    "marked": "1.2.2",
+    "normalize.css": "8.0.1",
+    "vue": "2.6.12",
+    "vue-router": "3.4.8",
+    "vue-scrollto": "2.20.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "@vue/cli-plugin-babel": "4.5.8",
+    "@vue/cli-plugin-eslint": "4.5.8",
+    "@vue/cli-service": "4.5.8",
+    "babel-eslint": "10.1.0",
+    "eslint": "6.8.0",
+    "eslint-plugin-vue": "6.2.2",
+    "vue-template-compiler": "2.6.12"
   },
   "eslintConfig": {
     "root": true,
