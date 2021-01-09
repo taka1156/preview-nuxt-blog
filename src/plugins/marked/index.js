@@ -12,7 +12,7 @@ marked.setOptions({
 
 // 目次生成
 let index = 0;
-let toc = [];
+const toc = [];
 
 const getAnchor = i => {
   return 'anchor_' + i;
@@ -20,10 +20,10 @@ const getAnchor = i => {
 
 const renderer = {
   heading(text, level) {
-    let escapedText = text.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '');
+    const escapedText = text.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '');
     if (level === 2) {
       index++;
-      let anchor = getAnchor(index);
+      const anchor = getAnchor(index);
       toc.push({ index, anchor, escapedText });
       return '<h' + level + ' id="' + anchor + '">' + text + '</h' + level + '>';
     } else {

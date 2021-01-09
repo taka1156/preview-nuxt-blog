@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleBadge ArticleBadgeの初期値(Category): badge 1`] = `
+"<div>
+  <div class=\\"article-badge article-badge--extend\\">
+    <base-text-stub>
+      ダミーカテゴリー
+    </base-text-stub>
+    <base-img-stub imgurl=\\"http://placehold.jp/150x150.png\\" imgalt=\\"ダミーカテゴリーの画像\\" size=\\"sm\\"></base-img-stub>
+  </div>
+</div>"
+`;
+
+exports[`ArticleBadge ArticleBadgeの初期値(Tag): badge 1`] = `
+"<div>
+  <div class=\\"article-badge article-badge--extend\\">
+    <base-text-stub>
+      ダミータグ
+    </base-text-stub>
+    <base-img-stub imgurl=\\"http://placehold.jp/150x150.png\\" imgalt=\\"ダミータグの画像\\" size=\\"sm\\"></base-img-stub>
+  </div>
+</div>"
+`;

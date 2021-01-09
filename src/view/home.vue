@@ -15,8 +15,7 @@
       </svg>
       <p>
         このページは
-        <a href="https://blog.taka1156.site/" rel="noopener">
-          Taka'sTechBlog </a
+        <a href="https://blog.taka1156.site/" rel="noopener"> Taka'sTechBlog </a
         ><br />
         のプレビューサイトです。
       </p>
@@ -26,7 +25,7 @@
 
 <script>
 export default {
-  name: 'home',
+  name: 'Home',
   props: {
     msg: String
   }
