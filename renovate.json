@@ -1,5 +1,30 @@
 {
   "extends": [
     "config:base"
-  ]
+  ],
+  "baseBranches": [
+    "renovate"
+  ],
+  "timezone": "Asia/Tokyo",
+  "schedule": "every weekend",
+  "labels": [
+    "dependencies"
+  ],
+  "patch": {
+    "automerge": true
+  },
+  "minor": {
+    "groupName": "all dependencies"
+  },
+  "vulnerabilityAlerts": {
+    "labels": [
+      "security"
+    ]
+  },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": [
+      "before 7pm on the first day of the month"
+    ]
+  }
 }
