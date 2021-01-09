@@ -3,7 +3,7 @@
     "config:base"
   ],
   "baseBranches": [
-    "renovate"
+    "develop"
   ],
   "timezone": "Asia/Tokyo",
   "schedule": "every weekend",
