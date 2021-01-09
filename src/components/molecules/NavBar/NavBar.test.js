@@ -39,10 +39,4 @@ describe('NavBar', () => {
     expect(wrapper.vm.isOpen).toBe(false);
     expect(wrapper.html()).toMatchSnapshot();
   });
-
-  it('changeStateを実行した時、`change-state`のイベントが発生するか', () => {
-    const wrapper = navBar({ isOpen: false });
-    wrapper.vm.changeState();
-    expect(wrapper.emitted('change-state')).toBeTruthy();
-  });
 });

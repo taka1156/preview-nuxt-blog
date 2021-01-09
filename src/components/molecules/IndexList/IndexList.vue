@@ -41,7 +41,7 @@ export default {
     toc: {
       type: Array,
       default: () => [],
-      requried: true
+      required: true
     }
   },
   methods: {
