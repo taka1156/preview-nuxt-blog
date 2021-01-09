@@ -17,13 +17,13 @@
     "marked": "1.2.2",
     "normalize.css": "8.0.1",
     "vue": "2.6.12",
-    "vue-router": "3.4.8",
+    "vue-router": "3.4.9",
     "vue-scrollto": "2.20.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "4.5.8",
-    "@vue/cli-plugin-eslint": "4.5.8",
-    "@vue/cli-service": "4.5.8",
+    "@vue/cli-plugin-babel": "4.5.10",
+    "@vue/cli-plugin-eslint": "4.5.10",
+    "@vue/cli-service": "4.5.10",
     "@vue/test-utils": "^1.1.2",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "10.1.0",
