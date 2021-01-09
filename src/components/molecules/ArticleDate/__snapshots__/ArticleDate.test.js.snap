@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArticleDate 値がpropsに反映されているか 1`] = `
+exports[`ArticleDate ArticleDate初期値: createdAt, updatedAt 1`] = `
 "<div>
   <div class=\\"article-date\\">
     <base-img-stub imgurl=\\"\\" imgalt=\\"日付\\" size=\\"sm\\"></base-img-stub>

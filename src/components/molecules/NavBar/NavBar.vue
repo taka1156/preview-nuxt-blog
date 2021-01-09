@@ -4,10 +4,9 @@
       <div class="nav-bar__box">
         <base-logo>{{ logoText }}</base-logo>
         <div class="nav-bar__icon-box">
-          <base-nav-icon :is-open="isOpen" />
-          <p class="nav-bar__text">
-            {{ isOpen === true ? 'CLOSE' : 'NAVI' }}
-          </p>
+          <base-nav-icon :is-open="isOpen">
+            {{ isOpen ? 'CLOSE' : 'NAVI' }}
+          </base-nav-icon>
         </div>
       </div>
     </div>

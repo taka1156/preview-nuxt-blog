@@ -1,10 +1,10 @@
-import { shallowMount } from '@vue/test-utils';
-import NavIcon from './BaseNavIcon.vue';
+import { mount } from '@vue/test-utils';
+import BaseNavIcon from './BaseNavIcon.vue';
 
 // NavIcon
-describe('NavIcon', () => {
-  const navIcon = propsData => {
-    return shallowMount(NavIcon, {
+describe('BaseNavIcon', () => {
+  const navIcon = propsData =>
+    mount(BaseNavIcon, {
       slots: {
         default: 'NAVI'
       },
@@ -12,7 +12,6 @@ describe('NavIcon', () => {
         ...propsData
       }
     });
-  };
 
   it('開いた時(閉じるアイコン表示)', () => {
     const wrapper = navIcon({ isOpen: true });

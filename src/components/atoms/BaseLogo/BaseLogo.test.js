@@ -1,11 +1,11 @@
-import { shallowMount } from '@vue/test-utils';
+import { mount } from '@vue/test-utils';
 import BaseLogo from './BaseLogo.vue';
 import { dummyLogo } from '@/__testdata__/testdata.js';
 
 // NavLogo
 describe('BaseLogo', () => {
   it('値がDOMに反映されているか', () => {
-    const baseLogo = shallowMount(BaseLogo, {
+    const baseLogo = mount(BaseLogo, {
       slots: {
         default: dummyLogo
       }

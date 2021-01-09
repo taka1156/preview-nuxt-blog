@@ -20,12 +20,6 @@ describe('IndexList', () => {
     expect(wrapper.vm.toc).toBe(dummyTocs);
   });
 
-  it('値がDOMに反映されているか', () => {
-    const wrapper = indexList({ isOpen: false, toc: dummyTocs });
-    expect(wrapper.vm.toc).toBe(dummyTocs);
-    expect(wrapper.html()).toMatchSnapshot();
-  });
-
   it('isOpenがtrueの時に`index-list`が表示', () => {
     const wrapper = indexList({ isOpen: true, toc: dummyTocs });
     expect(wrapper.find('.index-list').element.style.display).not.toBe('none');

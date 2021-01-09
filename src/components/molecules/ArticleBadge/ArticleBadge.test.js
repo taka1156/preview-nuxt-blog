@@ -10,13 +10,13 @@ describe('ArticleBadge', () => {
       }
     });
 
-  it('値がpropsに反映されているか: CategoryBadge', () => {
+  it('ArticleBadgeの初期値(Category): badge', () => {
     const wrapper = articleBadge(dummyCategoryBadge);
     expect(wrapper.vm.badge).toBe(dummyCategoryBadge.badge);
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('値がpropsに反映されているか: TagBadge', () => {
+  it('ArticleBadgeの初期値(Tag): badge', () => {
     const wrapper = articleBadge(dummyTagBadge);
     expect(wrapper.vm.badge).toBe(dummyTagBadge.badge);
     expect(wrapper.html()).toMatchSnapshot();

@@ -2,16 +2,12 @@ import { mount } from '@vue/test-utils';
 import IndexNav from './IndexNav.vue';
 
 describe('IndexNav', () => {
-  const indexNav = propsData => {
-    return mount(IndexNav, {
-      slots: {
-        default: 'TEXT'
-      },
+  const indexNav = propsData =>
+    mount(IndexNav, {
       propsData: {
         ...propsData
       }
     });
-  };
 
   it('IndexNav初期値: isOpen', () => {
     const wrapper = indexNav({ isOpen: false });
@@ -20,15 +16,25 @@ describe('IndexNav', () => {
     expect(wrapper.vm.isOpen).toBe(false);
   });
 
-  it('ナビゲーションバーを開く', () => {
+  it('目次を開く', () => {
     const wrapper = indexNav({ isOpen: true });
+    const navIconText = wrapper.find('.nav-icon__text');
     expect(wrapper.vm.isOpen).toBe(true);
+    expect(navIconText.text()).toBe('CLOSE');
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('ナビゲーションバーを閉じる', () => {
+  it('目次を閉じる', () => {
     const wrapper = indexNav({ isOpen: false });
+    const navIconText = wrapper.find('.nav-icon__text');
     expect(wrapper.vm.isOpen).toBe(false);
+    expect(navIconText.text()).toBe('INDEX');
     expect(wrapper.html()).toMatchSnapshot();
+  });
+
+  it('changeStateを実行した時、`change-state`のイベントが発生するか', () => {
+    const wrapper = indexNav({ isOpen: true });
+    wrapper.vm.changeState();
+    expect(wrapper.emitted('change-state')).toBeTruthy();
   });
 });

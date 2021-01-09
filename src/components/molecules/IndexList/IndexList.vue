@@ -40,7 +40,6 @@ export default {
      */
     toc: {
       type: Array,
-      default: () => [],
       required: true
     }
   },

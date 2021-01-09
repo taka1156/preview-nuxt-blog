@@ -36,8 +36,8 @@ export default {
     }
   },
   methods: {
-    dateFormat(date) {
-      if (date === undefined) return '--/--/--';
+    dateFormat(date = null) {
+      if (date == null) return '--/--/--';
       return new Date(date).toLocaleDateString();
     }
   }

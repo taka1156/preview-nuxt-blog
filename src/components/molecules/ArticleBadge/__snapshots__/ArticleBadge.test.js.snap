@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArticleBadge 値がpropsに反映されているか: CategoryBadge 1`] = `
+exports[`ArticleBadge ArticleBadgeの初期値(Category): badge 1`] = `
 "<div>
   <div class=\\"article-badge article-badge--extend\\">
     <base-text-stub>
@@ -11,7 +11,7 @@ exports[`ArticleBadge 値がpropsに反映されているか: CategoryBadge 1`] 
 </div>"
 `;
 
-exports[`ArticleBadge 値がpropsに反映されているか: TagBadge 1`] = `
+exports[`ArticleBadge ArticleBadgeの初期値(Tag): badge 1`] = `
 "<div>
   <div class=\\"article-badge article-badge--extend\\">
     <base-text-stub>
