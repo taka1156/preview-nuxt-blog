@@ -10,7 +10,7 @@
         </transition>
       </main>
       <footer>
-        <the-copyright />
+        <the-copyright :copyright-url="copyrightUrl" />
       </footer>
     </div>
   </div>
@@ -19,6 +19,7 @@
 <script>
 import TheNavigation from '@/components/organisms/TheNavigation/TheNavigation';
 import TheCopyright from '@/components/organisms/TheCopyright/TheCopyright';
+import { LOGO_TEXT, COPYRIGHT_URL } from '@/constants/index.js';
 
 export default {
   components: {
@@ -27,7 +28,8 @@ export default {
   },
   data() {
     return {
-      logoText: "Taka'sTechBlog"
+      logoText: LOGO_TEXT,
+      copyrightUrl: COPYRIGHT_URL
     };
   }
 };

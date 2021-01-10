@@ -23,7 +23,6 @@ export default {
      */
     category: {
       type: Object,
-      default: () => {},
       required: true
     }
   }

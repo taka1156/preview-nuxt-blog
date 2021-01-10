@@ -30,7 +30,6 @@ export default {
   props: {
     article: {
       type: Object,
-      default: () => {},
       required: true
     }
   }

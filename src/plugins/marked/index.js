@@ -12,7 +12,7 @@ marked.setOptions({
 
 // 目次生成
 let index = 0;
-const toc = [];
+const tocs = [];
 
 const getAnchor = i => {
   return 'anchor_' + i;
@@ -24,7 +24,7 @@ const renderer = {
     if (level === 2) {
       index++;
       const anchor = getAnchor(index);
-      toc.push({ index, anchor, escapedText });
+      tocs.push({ index, anchor, escapedText });
       return '<h' + level + ' id="' + anchor + '">' + text + '</h' + level + '>';
     } else {
       return '<h' + level + '>' + text + '</h' + level + '>';
@@ -34,4 +34,4 @@ const renderer = {
 
 marked.use({ renderer });
 
-export { toc, marked };
+export { tocs, marked };
