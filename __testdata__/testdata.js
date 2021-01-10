@@ -1,4 +1,5 @@
 const dummyImgUrl = 'http://placehold.jp/150x150.png';
+const dummyCopyrightUrl = 'http://placehold.jp';
 const MAX_NAV_DATA = 4;
 const MAX_ARTICLE_DATA = 10;
 const MAX_BADGE_DATA = 5;
@@ -117,5 +118,6 @@ export {
   dummyClassificationTag,
   dummyLogo,
   dummyTocs,
-  dummyRoutes
+  dummyRoutes,
+  dummyCopyrightUrl
 };

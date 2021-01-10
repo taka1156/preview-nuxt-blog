@@ -3,7 +3,7 @@
     <div class="article-tag">
       タグ:&nbsp;
       <div v-for="(tag, index) in tags" :key="`tag_${index}`">
-        <div @click="tagJump(tag)">
+        <div>
           <article-badge :badge="tag" />
         </div>
       </div>
@@ -25,7 +25,6 @@ export default {
      */
     tags: {
       type: Array,
-      default: () => [],
       required: true
     }
   }

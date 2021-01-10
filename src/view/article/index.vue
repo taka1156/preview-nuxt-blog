@@ -6,7 +6,7 @@
         <article-header :article="article" />
         <!--markdown埋め込み-->
         <div class="article-content__text markdown-body" v-html="parseMarked" />
-        <index-navigation :toc="toc" />
+        <index-navigation :tocs="tocs" />
       </div>
       <!--twitter Card-->
       <div class="ogp">
@@ -31,7 +31,7 @@
 import ArticleHeader from '@/components/organisms/ArticleHeader/ArticleHeader';
 import IndexNavigation from '@/components/organisms/IndexNavigation/IndexNavigation';
 import 'github-markdown-css';
-import { marked, toc } from '@/plugins/marked/index.js';
+import { marked, tocs } from '@/plugins/marked/index.js';
 import axios from 'axios';
 
 export default {
@@ -52,8 +52,8 @@ export default {
       if (!this.status) return '';
       return marked(this.article.body);
     },
-    toc() {
-      return toc;
+    tocs() {
+      return tocs;
     }
   },
   async created() {
