@@ -17,7 +17,6 @@ export default {
   props: {
     logoText: {
       type: String,
-      default: 'Please Setting Title',
       required: true
     }
   },

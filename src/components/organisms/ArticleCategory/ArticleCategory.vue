@@ -11,7 +11,6 @@
 
 <script>
 import ArticleBadge from '../../molecules/ArticleBadge/ArticleBadge';
-
 export default {
   name: 'ArticleCategory',
   components: {
@@ -35,7 +34,6 @@ export default {
   color: white;
   background-color: rgb(40, 167, 69);
 }
-
 .article-category {
   display: flex;
   justify-content: space-between;
