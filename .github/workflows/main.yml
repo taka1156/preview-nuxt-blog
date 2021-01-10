@@ -1,0 +1,50 @@
+name: firebase deploy
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  cache-version: v1
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14.x'
+
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/yarn
+        key: ${{ env.cache-version }}-${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ env.cache-version }}-${{ runner.os }}-node-
+
+    - name: install
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: yarn install
+
+    - name: test
+      run: yarn test:cov
+
+    - uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: build
+      env:
+        VUE_APP_ARTICLE_URL: ${{ secrets.VUE_APP_ARTICLE_URL }}
+        VUE_APP_MICRO_CMS: ${{ secrets.VUE_APP_MICRO_CMS }}
+      run: yarn generate:static
+
+    - name: deploy to Firebase Hosting
+      run: yarn firebase deploy --only hosting:preview --token $FIREBASE_TOKEN
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
