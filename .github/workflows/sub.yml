@@ -1,0 +1,46 @@
+name: test
+
+on:
+  pull_request:
+    branches:
+      - master
+      - develop
+
+env:
+  cache-version: v1
+
+jobs:
+  build-test:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14.x'
+
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/yarn
+        key: ${{ env.cache-version }}-${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ env.cache-version }}-${{ runner.os }}-node-
+
+    - name: install
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: yarn install
+
+    - name: lint
+      run: yarn lint:check
+
+    - name: test
+      run: yarn test
+    
+
+    - name: build
+      env:
+        VUE_APP_ARTICLE_URL: ${{ secrets.VUE_APP_ARTICLE_URL }}
+        VUE_APP_MICRO_CMS: ${{ secrets.VUE_APP_MICRO_CMS }}
+      run: yarn build
