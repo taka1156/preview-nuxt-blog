@@ -8,7 +8,7 @@
   "timezone": "Asia/Tokyo",
   "schedule": "every weekend",
   "labels": [
-    "dependencies"
+    "renovate"
   ],
   "patch": {
     "automerge": true
