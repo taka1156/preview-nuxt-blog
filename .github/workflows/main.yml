@@ -32,6 +32,8 @@ jobs:
       run: yarn install
 
     - name: test
+      env:
+        TZ: 'Asia/Tokyo'
       run: yarn test:cov
 
     - uses: coverallsapp/github-action@master
@@ -42,7 +44,7 @@ jobs:
       env:
         VUE_APP_ARTICLE_URL: ${{ secrets.VUE_APP_ARTICLE_URL }}
         VUE_APP_MICRO_CMS: ${{ secrets.VUE_APP_MICRO_CMS }}
-      run: yarn generate:static
+      run: yarn build
 
     - name: deploy to Firebase Hosting
       run: yarn firebase deploy --only hosting:preview --token $FIREBASE_TOKEN

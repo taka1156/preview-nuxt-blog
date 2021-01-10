@@ -36,8 +36,9 @@ jobs:
       run: yarn lint:check
 
     - name: test
+      env:
+        TZ: 'Asia/Tokyo'
       run: yarn test
-    
 
     - name: build
       env:
