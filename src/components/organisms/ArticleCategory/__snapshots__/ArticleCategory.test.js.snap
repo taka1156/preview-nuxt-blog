@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleCategory ArticleCategoryの初期値: category 1`] = `
+"<div>
+  <div class=\\"article-category\\">
+    カテゴリー:
+    <div>
+      <article-badge-stub badge=\\"[object Object]\\"></article-badge-stub>
+    </div>
+  </div>
+</div>"
+`;
