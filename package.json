@@ -22,9 +22,9 @@
     "vue-scrollto": "2.20.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "4.5.10",
-    "@vue/cli-plugin-eslint": "4.5.10",
-    "@vue/cli-service": "4.5.10",
+    "@vue/cli-plugin-babel": "4.5.11",
+    "@vue/cli-plugin-eslint": "4.5.11",
+    "@vue/cli-service": "4.5.11",
     "@vue/test-utils": "1.1.2",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.1.0",
