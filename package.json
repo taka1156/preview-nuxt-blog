@@ -18,7 +18,7 @@
     "marked": "1.2.9",
     "normalize.css": "8.0.1",
     "vue": "2.6.12",
-    "vue-router": "3.4.9",
+    "vue-router": "3.5.1",
     "vue-scrollto": "2.20.0"
   },
   "devDependencies": {
