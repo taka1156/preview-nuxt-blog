@@ -94,7 +94,7 @@ export default {
       const encodeTitleUtf8 = encodeURI(this.article.title);
       const OGP_IMAGE =
         'https://images.microcms-assets.io/protected/ap-northeast-1:7cf4e012-34b8-42e4-9878-9730fb0adfdc/service/taka_blog/media/pablo-ogp.png';
-      const PARAMS = `?txt=${encodeTitleUtf8}&txt-size=35&txt-color=white&txt-align=middle,center`;
+      const PARAMS = `?txt=${encodeTitleUtf8}&txtfont=Hiragino%20Sans%20W5&txt-size=35&txt-color=white&txt-align=middle,center`;
       this.image = OGP_IMAGE + PARAMS;
     }
   }
@@ -105,7 +105,8 @@ export default {
 /* twitter ogp */
 .ogp {
   border: 1px solid gray;
-  margin: 0 auto;
+  margin: 20px;
+  padding: 20px;
   height: 50%;
   width: 90%;
   padding: 10px;
@@ -115,10 +116,10 @@ export default {
 .twitter-card__card__frame {
   width: 90%;
   height: 72%;
-  margin: 0 auto;
+  margin: 30px auto;
   padding: 1px;
   text-align: left;
-  border: 0.5px solid #e1e8ed;
+  border: 1px solid #e1e8ed;
   border-radius: 0.85714em;
 }
 
