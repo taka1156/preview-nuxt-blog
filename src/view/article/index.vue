@@ -31,7 +31,7 @@
 import ArticleHeader from '@/components/organisms/ArticleHeader/ArticleHeader';
 import IndexNavigation from '@/components/organisms/IndexNavigation/IndexNavigation';
 import 'github-markdown-css';
-import { marked, tocs } from '@/plugins/marked/index.js';
+import { markedWrap, tocs } from '@/plugins/marked/index.js';
 import axios from 'axios';
 
 export default {
@@ -50,7 +50,7 @@ export default {
   computed: {
     parseMarked() {
       if (!this.status) return '';
-      return marked(this.article.body);
+      return markedWrap(this.article.body);
     },
     tocs() {
       return tocs;
